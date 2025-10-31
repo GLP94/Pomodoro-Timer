@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(182, 177, 177);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.time-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.start,
+.skip{
+    padding: 0 1.5rem;
+}
+
+.countCont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    gap: 0.5rem;
+    margin: 0.5rem;
+}
+
+.resetCount{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+svg{
+    fill: black;
+}
