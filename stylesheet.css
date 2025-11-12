@@ -6,9 +6,14 @@
 
 body {
     background-color: rgb(182, 177, 177);
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
     height: 100vh;
+    font-family: sans-serif;
+}
+
+.container{
+    margin: 4rem 1rem;
 }
 
 .time-cont{
@@ -16,27 +21,64 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 1rem 0 0 0;
+    .timer{
+        font-size: 5rem;
+        font-weight: 800;
+        padding: 0.5rem;
+        border-radius: 5px;
+        background: white;
+    }
 }
 
-.start,
-.skip{
-    padding: 0 1.5rem;
+.btn-cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .countCont{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     place-content: center;
-    gap: 0.5rem;
-    margin: 0.5rem;
+    margin: 1rem 0 1rem 1rem;
+    p, button{
+        display: flex;
+        align-items: center;
+    }
 }
 
 .resetCount{
     border: none;
     background: none;
     cursor: pointer;
+    &:hover{
+        animation: spin 2s linear infinite;
+    }
+}
+
+.break-cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    button{
+        padding: 0.5rem;
+        font-weight: 800;
+    }
 }
 
 svg{
     fill: black;
+}
+
+.progressBar{
+    width: 100%;
+    height: 5px;
+    background-color: black;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(-360deg);
+    }
 }
